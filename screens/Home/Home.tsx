@@ -5,10 +5,14 @@ import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
 import Tab from "../../components/Tab/Tab";
 import Badge from "../../components/Badge/Badge";
-import Ionicons from '@expo/vector-icons/FontAwesome';
+import Ionicons from "@expo/vector-icons/FontAwesome";
 import Search from "../../components/Search/Search";
 
 const Home = () => {
+  const handleOnSearch = (inputValue) => {
+    console.log(inputValue);
+  };
+
   return (
     <SafeAreaView
       style={[globalStyle.backgroundWhite, globalStyle.flex, { padding: 24 }]}
@@ -32,7 +36,7 @@ const Home = () => {
       </View>
 
       <Badge title="ashish" />
-      <Search/>
+      <Search onSearch={handleOnSearch} />
     </SafeAreaView>
   );
 };
